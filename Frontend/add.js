@@ -2,7 +2,7 @@ function sendPost(){
     const data = JSON.stringify({
         title: document.getElementById("title").value,
         singer: document.getElementById("singer").value,
-        genre:document.getElementById("genre").value
+        genre:document.getElementById("genre").value,
         timeline:document.getElementById("timeline").value
       
       });
