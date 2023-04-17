@@ -4,7 +4,7 @@ con = sqlite3.connect("MusicDB.db")
 print("Database opened successfully")
 
 con.execute(
-    "create table Music (id INTEGER PRIMARY KEY AUTOINCREMENT, Title TEXT NOT NULL, Singer TEXT UNIQUE NOT NULL, Genre TEXT NOT NULL, Timeline TEXT NOTN NULL)")
+    "create table Music (id INTEGER PRIMARY KEY AUTOINCREMENT, Title TEXT NOT NULL, Singer TEXT UNIQUE NOT NULL, Genre TEXT NOT NULL, Timeline TEXT NOT NULL)")
 
 print("Table created successfully")
 
