@@ -21,7 +21,7 @@ def saveDetails():
     try:
         data = request.get_json(force=True)
         print(data)
-        Title = data["titler"]
+        Title = data["title"]
         Singer = data["singer"]
         Genre = data["genre"]
         Timeline = data["timeline"]
@@ -30,12 +30,12 @@ def saveDetails():
             cur = con.cursor()
             cur.execute("INSERT into Music (Title, Singer, Genre, Timeline) values (?,?,?,?)", (Title, Singer, Genre, Timeline))
             con.commit()
-            msg = "Mudic successfully Added"
+            msg = "Music successfully Added"
     except:
         con.rollback()
         msg = "We can not add the music to the list"
     finally:
-        return Brand
+        return Title
         con.close()
 
 @app.route("/deleterecord/", methods=["POST"])
@@ -56,7 +56,6 @@ def deleterecord():
 def updaterecord():
     try:
         data = request.get_json(force=True)
-        print(title)
         id = data["id"]
         Title = data["title"]
         Singer = data["singer"]
@@ -65,7 +64,7 @@ def updaterecord():
 
         with sqlite3.connect("MusicDB.db") as con:
             cur = con.cursor()
-            cur.execute("UPDATE Music SET Title=?, Singer=?, Genre=?, TimeLine=? WHERE id=?", (title, singer, genre, timeline, id))
+            cur.execute("UPDATE Music SET Title=?, Singer=?, Genre=?, TimeLine=? WHERE id=?", (Title, Singer, Genre, Timeline, id))
             con.commit()
             msg = "Music successfully updated"
     except:
