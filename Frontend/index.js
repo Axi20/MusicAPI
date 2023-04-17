@@ -18,7 +18,7 @@ async function generator(url, id) {
            console.log(request.status);
            var div = document.createElement("tr");
            var mainContainer = document.getElementById(id);
-           div.innerHTML = "<th>"+query.id+"</th><th><input id='title"+query.id+"' value='"+query.title+"'/></th><th><input id='singer"+query.id+"' value='"+query.singer+"'/></th><th><input id='genre"+query.id+"' value='"+query.genre+"'/></th><th><input id='timeline"+query.id+"' value='"+query.timeline+"'/></th>"+"<button onclick = 'deleterecord("+query.id+")' type = 'submit' value='Submit'>Delete</button>"+"<button onclick = 'update("+query.id+")'>Update</button>" ;
+           div.innerHTML = "<th>"+query.id+"</th><th><input id='title"+query.id+"' value='"+query.Title+"'/></th><th><input id='singer"+query.id+"' value='"+query.Singer+"'/></th><th><input id='genre"+query.id+"' value='"+query.Genre+"'/></th><th><input id='timeline"+query.id+"' value='"+query.Timeline+"'/></th>"+"<button onclick = 'deleterecord("+query.id+")' type = 'submit' value='Submit'>Delete</button>"+"<button onclick = 'update("+query.id+")'>Update</button>" ;
            mainContainer.appendChild(div)
         })
       } else {
