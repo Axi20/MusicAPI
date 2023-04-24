@@ -1,0 +1,37 @@
+body {
+    background-color: rgba(0, 0, 0, 0.797);
+}
+.music-navbar {
+    background-color: rgba(70, 53, 53, 0.914);
+}
+.nav-link, .navbar-brand {
+    color: white;
+    text-decoration: none;
+}
+#add-new-music {
+    color: white; 
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.add-music-table {
+    display: flex;
+    justify-content: center;
+}
+.add-new-table {
+    color: white; 
+}
+.add-new-btn {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.add-new-btn:hover {
+    background-color: rgba(70, 53, 53, 0.914);
+    color: #ffffff;
+}
